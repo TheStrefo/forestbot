@@ -1,25 +1,25 @@
-const { SlashCommandBuilder, ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
+// const { SlashCommandBuilder, ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 
-module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('say')
-		.setDescription('Say something!'),
-	async execute(interaction, client) {
-		const modal = new ModalBuilder()
-		 .setTitle('Say something!')
-		.setCustomId('say')
+// module.exports = {
+// 	data: new SlashCommandBuilder()
+// 		.setName('say')
+// 		.setDescription('Say something!'),
+// 	async execute(interaction, client) {
+// 		const modal = new ModalBuilder()
+// 		 .setTitle('Say something!')
+// 		.setCustomId('say')
 
-		const input = new TextInputBuilder()
-		.setCustomId('message')
-		.setPlaceholder('Type something...')
-		.setLabel('Message')
-		.setStyle(TextInputStyle.Paragraph)
+// 		const input = new TextInputBuilder()
+// 		.setCustomId('message')
+// 		.setPlaceholder('Type something...')
+// 		.setLabel('Message')
+// 		.setStyle(TextInputStyle.Paragraph)
 
-		const question = new ActionRowBuilder()
-		.addComponents(input)
+// 		const question = new ActionRowBuilder()
+// 		.addComponents(input)
 
-		modal.addComponents(question)
+// 		modal.addComponents(question)
 
-		await interaction.showModal(modal)
-	}
-}
+// 		await interaction.showModal(modal)
+// 	}
+// }
